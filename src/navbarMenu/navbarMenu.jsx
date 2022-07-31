@@ -23,7 +23,7 @@ const NavbarMenu = () => {
 
 
     return ( 
-      <nav className="my_nav">
+      <nav className="my_nav sticky-top">
         <div className='myContainer'>
             <div className='nav_logo'>
                 <button className='nav-toggle' onClick={()=>SetShowLinks(!showLinks)}>
