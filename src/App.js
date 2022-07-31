@@ -1,10 +1,10 @@
-import { AiFillAmazonCircle } from "react-icons/ai";
-
+import NavbarMenu from "./navbarMenu/navbarMenu";
 
 const App = () => {
-  return ( 
-  <div>
 
+  return ( 
+    <div>
+      <NavbarMenu/>
    </div> 
   );
 }

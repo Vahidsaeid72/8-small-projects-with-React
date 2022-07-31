@@ -1,0 +1,13 @@
+.myContetnt{
+    height: 100vh;
+    width:100%;
+    display : flex;
+    justify-content:center;
+    align-items:center;
+    background-color:rgb(209, 196, 196)
+}
+.mylorem{
+    width: 40%;
+    height: auto ;
+    
+}
