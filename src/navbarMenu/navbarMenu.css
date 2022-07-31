@@ -2,9 +2,9 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    background-color : rgb(255, 255, 255);
-    box-shadow: 0 0 10px rgb(99, 99, 99);
-    height : 60px;
+    background-color : rgb(29, 29, 29);
+    box-shadow: 0 0 10px rgb(58, 57, 57);
+    height : 70px;
     padding : 0 20px;
     position: relative;
 }
@@ -22,6 +22,7 @@
     align-items:center;
     
 }
+
 .nav-toggle{
     background : transparent;
     border : 0;
@@ -41,7 +42,7 @@
 }
 .nav_links .list {
     display:flex;
-    align-items:center;
+    align-items:center !important;
     padding: 0;
     margin: 0;
 }
@@ -50,7 +51,7 @@
 }
 
 .nav_links .list li a{
-    color : #333;
+    color : rgb(255, 255, 255);
     font-size: 17px;
 }
 .nav_social{
@@ -64,7 +65,14 @@
 .nav_social li a{
     color : #333;
 }
-
+.nav_links .list li a:hover{
+    color : rgb(192, 189, 189);
+}
+@media screen and (min-width:768px){
+    .nav_links{
+        height: auto !important;
+    }
+}
 @media screen and (max-width:767px){
     .my_nav{
         box-shadow: 0 0 0;
@@ -82,13 +90,13 @@
         top : 65px;
         height:0; 
         overflow: hidden;
-        background-color:#fff;
-        box-shadow: 0px 3px 3px rgba(133, 131, 131, 0.678);
+        background-color : rgb(29, 29, 29);
+        box-shadow: 0px 3px 3px rgba(37, 37, 37, 0.678);
        
     }
-    .showlink{
+    /* .showlink{
         height:250px;
-    }
+    } */
 
     .nav_links .list{
         display: block;

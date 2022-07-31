@@ -1,12 +1,26 @@
 import './navbarMenu.css';
 import { FaBars,FaWindowClose } from "react-icons/fa";
 import { FcLibrary } from "react-icons/fc";
-import { useState } from 'react';
-import {links,socials} from './data';
-import { FaFacebook,FaFirefoxBrowser,FaGithubSquare,FaTwitterSquare } from "react-icons/fa";
+import { useEffect, useRef, useState } from 'react';
+import SocialMedia from './SocialMedia';
+
 
 const NavbarMenu = () => {
    const [showLinks,SetShowLinks] = useState(false);
+    const linksContinerRef = useRef();
+    const linksRef = useRef();
+
+
+    useEffect(()=>{
+        const linkHeight = linksRef.current.getBoundingClientRect().height;
+        if(showLinks){
+            linksContinerRef.current.style.height = `${linkHeight}px`;
+        }else{
+            linksContinerRef.current.style.height = 0;
+        }
+    },[showLinks])
+
+
 
     return ( 
       <nav className="my_nav">
@@ -17,21 +31,16 @@ const NavbarMenu = () => {
                 </button>
                 <a href="/" className='display-5'><FcLibrary/></a>
             </div>
-            <div className={`nav_links ${showLinks?'showlink':''}`}>
-                <ul className="list">
-                    {links.map((link) =>(
-                        <li key ={link.id}>
-                            <a href={link.url}>{link.text}</a>
-                        </li>
-                    ))}
+
+            <div className='nav_links' ref={linksContinerRef}>
+                <ul className="list pb-2" ref={linksRef}>
+                    <li><a href='/'>خانه</a></li>
+                    <li><a href='/'>درباره ما</a></li>
+                    <li><a href='/'>تماس با ما</a></li>
+                    <li><a href='/'>پروژه ها</a></li>
                 </ul>
             </div>
-            <ul className='nav_social'>
-                <li className='text-primary fs-4'><FaTwitterSquare/></li>
-                <li className='text-danger fs-4'><FaFirefoxBrowser/></li>
-                <li className='text-primary fs-4'><FaFacebook/></li>
-                <li className='text-dark fs-4'><FaGithubSquare/></li>
-            </ul>
+                <SocialMedia/>
         </div>
       </nav>
    );
