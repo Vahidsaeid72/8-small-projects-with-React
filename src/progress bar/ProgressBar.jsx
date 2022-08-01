@@ -20,7 +20,7 @@ const ProgressBar = () => {
 
     return ( 
     <>
-            <div className="mycontiner">
+        <div className="mycontiner">
             <div  className="myprogress" style={{width :`${myWidth}%`}}></div>
         </div>
         <Content/>

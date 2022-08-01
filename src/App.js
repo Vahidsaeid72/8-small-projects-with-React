@@ -1,9 +1,10 @@
+import SearchPic from "./searchPicFetch/SearchPic";
 
 const App = () => {
 
   return ( 
-    <div>
-      
+  <div>
+    <SearchPic/>
    </div> 
   );
 }
