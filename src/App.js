@@ -1,10 +1,11 @@
-import SearchPic from "./searchPicFetch/SearchPic";
+import SendMassage from "./sendMassage/SendMassage";
+
 
 const App = () => {
 
   return ( 
   <div>
-    <SearchPic/>
+    <SendMassage/>
    </div> 
   );
 }

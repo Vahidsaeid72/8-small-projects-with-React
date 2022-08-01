@@ -1,0 +1,16 @@
+.myform{
+    width: 350px;
+    height: 430px;
+    background-color: #fff;
+}
+.myInput{
+    width:75%;
+    margin: 20px auto;
+    border: none;
+    border-bottom: 1px solid rgb(114, 114, 114);
+    outline: none;
+    resize: none;
+}
+.myInput:focus{
+    border-bottom: 3px solid rgb(22, 22, 22);
+}

@@ -10,7 +10,9 @@
     text-decoration: none !important;
     list-style: none !important; 
     font-family:'vazir' !important;
+    
 }
 body{
     direction:rtl ;
+    text-align: right ;
 }
